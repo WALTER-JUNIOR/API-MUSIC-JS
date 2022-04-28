@@ -39,12 +39,12 @@ const fetchData = async (cancion) => {
 };
 
 const cancionesCard = (cancionesArr) => {
-  PrintCard.textContent = "";
-  //   console.log(cancionesArr);
+  let htmlCanciones = "";
+
   cancionesArr.forEach((item) => {
     // console.log(item.title);
     // console.log(PrintCard)
-    PrintCard.innerHTML += `<div class="card shadow p-3 mb-5 bg-body rounded" style="width: 18rem">
+    htmlCanciones += `<div class="card shadow p-3 mb-5 bg-body rounded" style="width: 18rem">
                                     <img src="${item.album.cover_medium}" class="card-img-top" alt="" />
                                     <div class="card-body">
                                         <h5 class="card-title">${item.title}</h5>
@@ -55,4 +55,5 @@ const cancionesCard = (cancionesArr) => {
                                     </div>
                                 </div>`;
   });
+  PrintCard.innerHTML = htmlCanciones;
 };
