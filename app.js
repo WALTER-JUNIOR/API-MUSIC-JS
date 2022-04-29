@@ -41,8 +41,7 @@ const fetchData = async (cancion) => {
 const cancionesCard = (cancionesArr) => {
   let htmlCanciones = "";
 
-  cancionesArr.forEach((item) => {
-    
+  cancionesArr.forEach((item) => {  
     htmlCanciones += `<div class="card shadow p-3 mb-5 bg-body rounded" style="width: 18rem">
                                     <img src="${item.album.cover_medium}" class="card-img-top" alt="" />
                                     <div class="card-body">
